@@ -55,3 +55,12 @@
 </body>
 
 </html>
+adobeDCView.registerCallback(
+  AdobeDC.View.Enum.CallbackType.EVENT_LISTENER,
+  function (event) {
+    if (event.type === "DOCUMENT_PRINT") {
+      location.reload();
+    }
+  },
+  { enablePDFAnalytics: true }
+);
