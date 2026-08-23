@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+
+</head>
+
+<body>
+
+  <div id="adobe-dc-view" style="height: 100vh;"></div>
+
+ 
+
+  <script type="text/javascript">
+
+    document.addEventListener("adobe_dc_view_sdk.ready", function () {
+
+      var adobeDCView = new AdobeDC.View({
+
+        clientId: "25edb71851804bfb95969655fa276420",
+
+        divId: "adobe-dc-view"
+
+      });
+
+ 
+
+      adobeDCView.previewFile({
+
+        content: { location: { url: "hotmill.pdf" } },
+
+        metaData: { fileName: "The Hot Mill Complete Reference Book.pdf" }
+
+      }, {
+
+        embedMode: "FULL_WINDOW",
+
+        showDownloadPDF: false,
+
+        showPrintPDF: false,
+
+        showAnnotationTools: false,
+
+        showLeftHandPanel: true
+
+      });
+
+    });
+
+  </script>
+
+</body>
+
+</html>
